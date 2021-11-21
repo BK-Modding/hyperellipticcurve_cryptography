@@ -1,0 +1,275 @@
+(* Content-type: application/mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 7.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       145,          7]
+NotebookDataLength[      7680,        266]
+NotebookOptionsPosition[      6867,        235]
+NotebookOutlinePosition[      7204,        250]
+CellTagsIndexPosition[      7161,        247]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[{
+ RowBox[{"<<", "FiniteFields`FiniteFields`"}], "\[IndentingNewLine]", 
+ RowBox[{"<<", "Algebra`PolynomialExtendedGCD`"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"K", "=", 
+   RowBox[{"GF", "[", 
+    RowBox[{"2", ",", 
+     RowBox[{"{", 
+      RowBox[{"1", ",", "0", ",", "1", ",", "0", ",", "0", ",", "1"}], 
+      "}"}]}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"SetFieldFormat", "[", 
+  RowBox[{"K", ",", 
+   RowBox[{"FormatType", "\[Rule]", 
+    RowBox[{"FunctionOfCode", "[", "k", "]"}]}]}], "]"}]}], "Input",
+ CellChangeTimes->{{3.481562425693473*^9, 3.481562449284375*^9}, {
+   3.481562531695058*^9, 3.481562572318842*^9}, 3.481615719454431*^9}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"h", "=", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"k", "[", "1", "]"}], 
+     RowBox[{"x", "^", "2"}]}], "+", 
+    RowBox[{
+     RowBox[{"k", "[", "1", "]"}], "x"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"f", "=", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"k", "[", "1", "]"}], 
+     RowBox[{"x", "^", "5"}]}], "+", 
+    RowBox[{
+     RowBox[{"k", "[", "1", "]"}], 
+     RowBox[{"x", "^", "4"}]}], "+", 
+    RowBox[{
+     RowBox[{"k", "[", "1", "]"}], 
+     RowBox[{"x", "^", "2"}]}], "+", 
+    RowBox[{"k", "[", "1", "]"}]}]}], ";"}]}], "Input",
+ CellChangeTimes->{3.484241306802358*^9}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"a1", "=", 
+   RowBox[{
+    RowBox[{"x", "^", "2"}], "+", 
+    RowBox[{
+     RowBox[{"k", "[", "21", "]"}], "x"}], "+", 
+    RowBox[{"k", "[", "22", "]"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"b1", "=", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"k", "[", "4", "]"}], "x"}], "+", 
+    RowBox[{"k", "[", "19", "]"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"a2", "=", 
+   RowBox[{
+    RowBox[{"x", "^", "2"}], "+", 
+    RowBox[{
+     RowBox[{"k", "[", "27", "]"}], "x"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"b2", "=", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"k", "[", "25", "]"}], "x"}], "+", 
+    RowBox[{"k", "[", "1", "]"}]}]}], ";"}]}], "Input",
+ CellChangeTimes->{{3.481615725722846*^9, 3.481615727060805*^9}, {
+   3.481615796215234*^9, 3.48161592286972*^9}, {3.481616052263377*^9, 
+   3.481616056624905*^9}, {3.481616216167195*^9, 3.481616241914096*^9}, {
+   3.481617891696176*^9, 3.481617903941749*^9}, 3.482942717712227*^9, {
+   3.484241297848539*^9, 3.484241299121212*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"d1", ",", 
+     RowBox[{"{", 
+      RowBox[{"e1", ",", "e2"}], "}"}]}], "}"}], "=", 
+   RowBox[{"PolynomialExtendedGCD", "[", 
+    RowBox[{"a1", ",", "a2", ",", "x"}], "]"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.481616113475842*^9, 3.481616125448381*^9}, {
+  3.481616157782964*^9, 3.481616195797075*^9}, {3.481616312494849*^9, 
+  3.481616315597955*^9}, {3.484241328792629*^9, 3.48424136042741*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"d", ",", 
+     RowBox[{"{", 
+      RowBox[{"c1", ",", "c2"}], "}"}]}], "}"}], "=", 
+   RowBox[{"PolynomialExtendedGCD", "[", 
+    RowBox[{"d1", ",", 
+     RowBox[{"(", 
+      RowBox[{"b1", "+", "b2", "+", "h"}], ")"}], ",", "x"}], "]"}]}], 
+  ";"}]], "Input",
+ CellChangeTimes->{{3.481616202994197*^9, 3.481616204397889*^9}, {
+   3.481616247332335*^9, 3.481616258916302*^9}, {3.481616330622983*^9, 
+   3.481616332046018*^9}, 3.484241365742694*^9}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{"s1", "=", 
+  RowBox[{"Expand", "[", 
+   RowBox[{"c1", "*", "e1"}], "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{"s2", "=", 
+  RowBox[{"Expand", "[", 
+   RowBox[{"c1", "*", "e2"}], "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{"s3", "=", "c2"}]}], "Input",
+ CellChangeTimes->{{3.481616339871484*^9, 3.481616371362917*^9}, {
+  3.481617989047122*^9, 3.48161800028031*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"x", " ", 
+   TagBox[
+    RowBox[{"k", "[", "25", "]"}],
+    HoldForm]}], "+", 
+  TagBox[
+   RowBox[{"k", "[", "5", "]"}],
+   HoldForm]}]], "Output",
+ CellChangeTimes->{3.481616374716126*^9, 3.481617909103376*^9, 
+  3.481618001584681*^9, 3.48294277022906*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"x", " ", 
+   TagBox[
+    RowBox[{"k", "[", "25", "]"}],
+    HoldForm]}], "+", 
+  TagBox[
+   RowBox[{"k", "[", "5", "]"}],
+   HoldForm]}]], "Output",
+ CellChangeTimes->{3.481616374716126*^9, 3.481617909103376*^9, 
+  3.481618001584681*^9, 3.482942770260856*^9}],
+
+Cell[BoxData[
+ TagBox[
+  RowBox[{"k", "[", "10", "]"}],
+  HoldForm]], "Output",
+ CellChangeTimes->{3.481616374716126*^9, 3.481617909103376*^9, 
+  3.481618001584681*^9, 3.482942770367872*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"a", "=", 
+  RowBox[{"PolynomialQuotient", "[", 
+   RowBox[{
+    RowBox[{"a1", "*", "a2"}], ",", 
+    RowBox[{"d", "^", "2"}], ",", "x"}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.481616440298873*^9, 3.481616472484546*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  SuperscriptBox["x", "4"], "+", 
+  RowBox[{"x", " ", 
+   TagBox[
+    RowBox[{"k", "[", "28", "]"}],
+    HoldForm]}], "+", 
+  RowBox[{
+   SuperscriptBox["x", "2"], " ", 
+   TagBox[
+    RowBox[{"k", "[", "2", "]"}],
+    HoldForm]}], "+", 
+  RowBox[{
+   SuperscriptBox["x", "3"], " ", 
+   TagBox[
+    RowBox[{"k", "[", "14", "]"}],
+    HoldForm]}]}]], "Output",
+ CellChangeTimes->{3.481616473569696*^9, 3.481617914745871*^9, 
+  3.482942776742846*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"b", "=", 
+  RowBox[{"PolynomialRemainder", "[", 
+   RowBox[{
+    RowBox[{"PolynomialQuotient", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"s1", "*", "a1", "*", "b2"}], "+", 
+       RowBox[{"s2", "*", "a2", "*", "b1"}], "+", 
+       RowBox[{"s3", "*", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"b1", "*", "b2"}], "+", "f"}], ")"}]}]}], ",", "d", ",", 
+      "x"}], "]"}], ",", "a", ",", "x"}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.481616480980829*^9, 3.481616584738954*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   SuperscriptBox["x", "2"], " ", 
+   TagBox[
+    RowBox[{"k", "[", "12", "]"}],
+    HoldForm]}], "+", 
+  RowBox[{
+   SuperscriptBox["x", "3"], " ", 
+   TagBox[
+    RowBox[{"k", "[", "14", "]"}],
+    HoldForm]}], "+", 
+  TagBox[
+   RowBox[{"k", "[", "1", "]"}],
+   HoldForm]}]], "Output",
+ CellChangeTimes->{3.481616586229848*^9, 3.481617917336272*^9, 
+  3.482942778816015*^9}]
+}, Open  ]]
+},
+WindowSize->{640, 623},
+WindowMargins->{{103, Automatic}, {Automatic, 0}},
+FrontEndVersion->"7.0 for Linux x86 (32-bit) (November 10, 2008)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[545, 20, 681, 15, 99, "Input"],
+Cell[1229, 37, 636, 22, 55, "Input"],
+Cell[1868, 61, 1065, 30, 99, "Input"],
+Cell[2936, 93, 467, 11, 32, "Input"],
+Cell[3406, 106, 512, 14, 32, "Input"],
+Cell[CellGroupData[{
+Cell[3943, 124, 387, 9, 77, "Input"],
+Cell[4333, 135, 293, 10, 31, "Output"],
+Cell[4629, 147, 294, 10, 31, "Output"],
+Cell[4926, 159, 190, 5, 31, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[5153, 169, 246, 6, 32, "Input"],
+Cell[5402, 177, 472, 18, 33, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[5911, 200, 525, 14, 77, "Input"],
+Cell[6439, 216, 412, 16, 33, "Output"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
